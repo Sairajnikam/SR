@@ -1,0 +1,38 @@
+<html>
+   </body>
+        <h1> This is test of jQuery...</h1>
+<p>This is KBPIMSR</p>
+<label>Enter the user id </label>
+<input id="t1" type="text" value="">
+<p id="check">ache se dhek 10 se jadya number math dal </p>
+
+
+        <script src="jquery-3.7.1.min.js"></script>
+        <script>
+            $(document).ready(function(){
+            console.log($);
+            $("h1").click(function(){
+                // console.log("paral clicked");
+                alert("This is testing...");
+                $("chek").hide();
+            });
+            $("#t1").keyup(function(){
+                validate()
+            });
+            function validate()
+            {
+                let usname=$("#t1").val();
+                if (usname.length<3|| usname.length>10)
+                 {
+                $("#check").show();
+            return false;
+                 }
+                 else{
+                    $("#chek").hide();
+                 }
+            }
+            });
+        </script>
+    
+     </body>
+</html>
